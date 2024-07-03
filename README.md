@@ -1,5 +1,74 @@
 # PHP-Basic
 
+PHP Standards for Coding
+Introduction
+PHP coding standards are essential for maintaining clean, readable, and efficient code. This document outlines the basic rules and guidelines for writing PHP code, ensuring consistency and best practices.
+
+Indentation
+Use four spaces for indentation, not tabs.
+Configure your text editor to expand all tabs into spaces.
+PHP Tags
+Always use the long PHP opening tag <?php instead of the short tag <?.
+The closing tag ?> is not required, but if used, it must be on a separate line.
+Naming Conventions
+Use camelCase for variable names, function names, and class names.
+Use underscores for constants.
+Control Structures
+Use curly braces for control structures (if, else, while, for, etc.).
+Place the opening brace on the same line as the control structure.
+Place the closing brace on a new line.
+Functions
+Use descriptive function names.
+Use parentheses to enclose function arguments.
+Place the opening parenthesis on the same line as the function name.
+Place the closing parenthesis on a new line.
+Arrays
+Use square brackets [] for array declarations.
+Use commas to separate array elements.
+Strings
+Use single quotes for string literals.
+Use double quotes for strings with variables.
+Comments
+Use // for single-line comments.
+Use /* */ for multi-line comments.
+
+
+### Examples
+php
+
+Verify
+Open In Editor
+
+// Single-line comment
+$variable = 'value'; // Assign a value to a variable
+
+/* Multi-line comment
+This is a multi-line comment
+*/
+
+// Function example
+function greet($name) {
+    echo "Hello, $name!";
+}
+
+// Array example
+$fruits = ['apple', 'banana', 'orange'];
+
+// String example
+$string = 'Hello, ' . $name . '!';
+
+// Control structure example
+if ($condition) {
+    // Code to execute if condition is true
+} else {
+    // Code to execute if condition is false
+}
+Best Practices
+Keep your code organized and readable.
+Use meaningful variable names and comments.
+Follow the PSR-12 coding standard.
+
+
 PHP Coding Standards
 
 These PHP coding standards are intended for the WordPress community as a whole. They are mandatory for WordPress Core and we encourage you to use them for your themes and plugins as well.
@@ -16,7 +85,7 @@ General
 Opening and Closing PHP Tags
 When embedding multi-line PHP snippets within an HTML block, the PHP open and close tags must be on a line by themselves.
 
-Correct (Multiline):
+### Correct (Multiline):
 
 function foo() {
     ?>
@@ -32,7 +101,9 @@ function foo() {
     </div>
     <?php
 }
-Correct (Single Line):
+
+
+### Correct (Single Line):
 
 <input name="<?php echo esc_attr( $name ); ?>" />
 Incorrect:
